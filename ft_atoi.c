@@ -1,13 +1,19 @@
-static void	space_sign(char *str, int *count, int *sign);
-int	ft_atoi(char *str)
+# include "libft.h"
+
+static int	space_counter(char	*s);
+static int	positive_negative_finder(char	*s, int	*sign);
+
+int	ft_atoi(const char	*str)
 {
 	int		nbr;
 	int		sign;
 	int		count;
 
 	nbr = 0;
-	space_sign(str, &count, &sign);
-	while (str[count] >= '0' && str[count] <= '9')
+	sign = 1;
+	count = space_counter(str);
+	count += positive_negative_finder(str, &sign);
+	while (ft_isdigit(str[count]))
 	{
 		nbr *= 10;
 		nbr += (str[count] - '0');
@@ -16,16 +22,26 @@ int	ft_atoi(char *str)
 	return (nbr * sign);
 }
 
-static void	space_sign(char *str, int *count, int *sign)
+static int space_counter(char	*s)
 {
-	*sign = 1;
-	*count = 0;
-	while (str[*count] == 32 || (str[*count] > 8 && str[*count] < 14))
-		*count += 1;
-	while (str[*count] == '-' || str[*count] == '+')
+	int	count;
+
+	count = 0;
+	while (s[count] == 32 || (s[count] > 8 && s[count] < 14))
+		count += 1;
+	return (count);
+}
+
+static int positive_negative_finder(char	*s, int	*sign)
+{
+	int	count;
+
+	count = 0;
+	while (s[count] == '-' || s[count] == '+')
 	{
-		if (str[*count] == '-')
+		if (s[count] == '-')
 			*sign *= -1;
-		*count += 1;
+		count += 1;
 	}
+	return (count);
 }

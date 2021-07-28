@@ -14,7 +14,7 @@ int ft_atof(const char *str);
 int ft_strncmp(const char *s1, const char *s2, size_t n);
 
 char	*ft_strchr(const char	*s, int	c);
-char	*strnstr (const char	*s1, const char	*s2, size_t	len);
+char	*ft_strnstr(const char	*s1, const char	*s2, size_t	len);
 
 
 

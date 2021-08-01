@@ -1,7 +1,7 @@
 #include "libft.h"
 
-static int	space_counter(char	*s);
-static int	positive_negative_finder(char	*s, int	*sign);
+static int	space_counter(const char	*s);
+static int	positive_negative_finder(const char	*s, int	*sign);
 
 int	ft_atoi(const char	*str)
 {
@@ -22,7 +22,7 @@ int	ft_atoi(const char	*str)
 	return (nbr * sign);
 }
 
-static int	space_counter(char	*s)
+static int	space_counter(const char	*s)
 {
 	int	count;
 
@@ -32,7 +32,7 @@ static int	space_counter(char	*s)
 	return (count);
 }
 
-static int	positive_negative_finder(char	*s, int	*sign)
+static int	positive_negative_finder(const char	*s, int	*sign)
 {
 	int	count;
 

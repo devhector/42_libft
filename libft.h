@@ -6,7 +6,7 @@
 /*   By: hectfern <hectfern@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/02 15:32:03 by hectfern          #+#    #+#             */
-/*   Updated: 2021/08/02 16:01:08 by hectfern         ###   ########.fr       */
+/*   Updated: 2021/08/02 16:36:11 by hectfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define LIBFT_H
 
 # include <unistd.h>
-//# include <stdlib.h>
+
 int		ft_isalnum(int	c);
 int		ft_isalpha(int	c);
 int		ft_isascii(int	c);

@@ -2,11 +2,29 @@
 
 void	*ft_memmov(void	*s1, const void	*s2, size_t	n)
 {
-	char	*d;
-	const char	*s;
+	char	*dest;
+	const char	*src;
 	size_t	i;
 
-	d = s1;
-	s = s2;
-	
+	src = s2;
+	dest = s1;
+	if (dest < src)
+	{
+		i = 0;
+		while(n--)
+		{
+			dest[i] = src[i];
+			i++;
+		}
+	}
+	else
+	{
+		i = n - 1;
+		while(n--)
+		{
+			dest[i] = src[i];
+			i--;
+		}
+	}
+	return (s1);
 }

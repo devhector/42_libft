@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmov.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hectfern <hectfern@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/02 16:34:21 by hectfern          #+#    #+#             */
-/*   Updated: 2021/08/02 16:34:22 by hectfern         ###   ########.fr       */
+/*   Updated: 2021/08/03 15:37:21 by hectfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ void	*ft_memmov(void	*s1, const void	*s2, size_t	n)
 	const char	*src;
 	size_t		i;
 
-	src = s2;
-	dest = s1;
+	src = (char *)s2;
+	dest = (const char *)s1;
 	if (dest < src)
 	{
 		i = 0;

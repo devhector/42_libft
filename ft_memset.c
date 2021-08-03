@@ -6,7 +6,7 @@
 /*   By: hectfern <hectfern@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/02 16:34:31 by hectfern          #+#    #+#             */
-/*   Updated: 2021/08/02 16:34:33 by hectfern         ###   ########.fr       */
+/*   Updated: 2021/08/03 16:13:24 by hectfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,8 @@
 void	*ft_memset(void	*s, int	c, size_t	n)
 {
 	char	*p;
-	size_t	i;
 
-	p = s;
-	i = 0;
+	p = (char *)s;
 	while (n--)
 	{
 		*p++ = (char)c;

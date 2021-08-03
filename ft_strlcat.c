@@ -6,13 +6,13 @@
 /*   By: hectfern <hectfern@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/02 16:34:52 by hectfern          #+#    #+#             */
-/*   Updated: 2021/08/02 16:34:53 by hectfern         ###   ########.fr       */
+/*   Updated: 2021/08/03 15:50:48 by hectfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
+size_t	ft_strlcat(char	*dst, const char	*src, size_t	size)
 {
 	size_t	i;
 	size_t	len_dst;

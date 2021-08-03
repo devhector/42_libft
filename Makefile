@@ -1,5 +1,5 @@
 CC			= clang
-CFLAGS		= -Wall -Werror -Wextra -std=99 -g
+CFLAGS		= -Wall -Werror -Wextra -std=c99 -g
 
 LIB			= libft.a
 

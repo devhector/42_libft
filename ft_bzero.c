@@ -6,7 +6,7 @@
 /*   By: hectfern <hectfern@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/02 16:33:01 by hectfern          #+#    #+#             */
-/*   Updated: 2021/08/02 16:33:04 by hectfern         ###   ########.fr       */
+/*   Updated: 2021/08/03 11:39:57 by hectfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,6 @@
 
 void	*ft_bzero(void *s, size_t n)
 {
-	ft_memset(s, 0, n);
+	ft_memset((void *)s, 0, (size_t)n);
+	return (s);
 }

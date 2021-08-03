@@ -6,7 +6,7 @@
 /*   By: hectfern <hectfern@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/02 16:35:27 by hectfern          #+#    #+#             */
-/*   Updated: 2021/08/02 16:35:28 by hectfern         ###   ########.fr       */
+/*   Updated: 2021/08/03 10:19:51 by hectfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_strrchr(const char	*s, int	c)
 {
 	char	*p;
 
-	p == NULL;
+	p = NULL;
 	while (*s)
 	{
 		if (*s == (char)c)

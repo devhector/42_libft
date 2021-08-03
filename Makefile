@@ -1,7 +1,7 @@
 CC			= clang
 CFLAGS		= -Wall -Werror -Wextra -std=c99 -g
 
-LIB			= libft.a
+NAME			= libft.a
 
 FTSRC		= ft_atoi.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c\
 				ft_isprint.c ft_memcmp.c ft_memset.c ft_strchr.c ft_strlcat.c\
@@ -11,11 +11,11 @@ FTSRC		= ft_atoi.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c\
 
 OBJ			= $(FTSRC:.c=.o)
 
-all: $(LIB)
+all: $(NAME)
 
-$(LIB): $(OBJ) libft.h
-	ar -rcs $(LIB) $(OBJ)
-	ranlib $(LIB)
+$(NAME): $(OBJ) libft.h
+	ar -rcs $(NAME) $(OBJ)
+	ranlib $(NAME)
 
 
 c.o: $(FTSRC)

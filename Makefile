@@ -19,7 +19,8 @@ $(NAME):	$(OBJ) libft.h
 			ar $(FLAGLIB) $(NAME) $(OBJ)
 			ranlib $(NAME)
 .c.o:
-			$(CC) $(CFLAGS) -I . -c $< -o $@
+			@$(CC) $(CFLAGS) -I . -c $< -o $@
+			echo "✅ Complete build"
 
 clean:
 			$(RM) $(OBJ)

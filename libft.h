@@ -6,7 +6,7 @@
 /*   By: hectfern <hectfern@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/02 15:32:03 by hectfern          #+#    #+#             */
-/*   Updated: 2021/08/03 15:50:13 by hectfern         ###   ########.fr       */
+/*   Updated: 2021/08/04 11:51:19 by hectfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ char	*ft_strdup(const char	*s);
 char	*ft_strchr(const char	*s, int	c);
 char	*ft_strrchr(const char	*s, int	c);
 char	*ft_strnstr(const char	*s1, const char	*s2, size_t	len);
+char	*ft_substr(char const	*s, unsigned int	pos, size_t	len);
 
 size_t	ft_strlen(const char	*s);
 size_t	ft_strlcat(char	*dst, const char	*src, size_t	size);

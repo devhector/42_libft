@@ -20,7 +20,6 @@ $(NAME):	$(OBJ) libft.h
 			ranlib $(NAME)
 .c.o:
 			@$(CC) $(CFLAGS) -I . -c $< -o $@
-			echo "✅ Complete build"
 
 clean:
 			$(RM) $(OBJ)

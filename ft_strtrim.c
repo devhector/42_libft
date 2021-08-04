@@ -6,7 +6,7 @@
 /*   By: hectfern <hectfern@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/04 15:00:58 by hectfern          #+#    #+#             */
-/*   Updated: 2021/08/04 15:02:50 by hectfern         ###   ########.fr       */
+/*   Updated: 2021/08/04 17:07:34 by hectfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 char	*ft_strtrim(char const	*s1, char const	*set)
 {
 
+	if (!s1 || !set)
+		return (NULL);
 }
 
 /*

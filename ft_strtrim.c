@@ -6,7 +6,7 @@
 /*   By: hectfern <hectfern@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/04 15:00:58 by hectfern          #+#    #+#             */
-/*   Updated: 2021/08/05 14:16:44 by hectfern         ###   ########.fr       */
+/*   Updated: 2021/08/05 14:44:10 by hectfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strtrim(char const	*s1, char const	*set)
 	{
 		start = 0;
 		end = ft_strlen(s1);
-		while(s1[start] && start < end && ft_strchr(set, s1[start]))
+		while (s1[start] && start < end && ft_strchr(set, s1[start]))
 			start++;
 		while (s1[end - 1] && end > start && ft_strchr(set, s1[end - 1]))
 			end--;

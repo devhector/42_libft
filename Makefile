@@ -17,16 +17,20 @@ OBJ			= $(FUNC:.c=.o)
 all:		$(NAME)
 
 $(NAME):	$(OBJ) libft.h
-			ar $(FLAGLIB) $(NAME) $(OBJ)
-			ranlib $(NAME)
+			@echo "Linking $(NAME)"
+			@ar $(FLAGLIB) $(NAME) $(OBJ)
+			@ranlib $(NAME)
 .c.o:
+			@echo "Compiling $(<)"
 			@$(CC) $(CFLAGS) -I . -c $< -o $@
 
 clean:
-			$(RM) $(OBJ)
+			@echo "Cleaning"
+			@$(RM) $(OBJ)
 
 fclean:		clean
-			$(RM) $(NAME)
+			@echo "Cleaning headers"
+			@$(RM) $(NAME)
 
 re:			fclean all
 

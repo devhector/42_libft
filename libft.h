@@ -6,7 +6,7 @@
 /*   By: hectfern <hectfern@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/02 15:32:03 by hectfern          #+#    #+#             */
-/*   Updated: 2021/08/06 11:23:55 by hectfern         ###   ########.fr       */
+/*   Updated: 2021/08/06 11:39:41 by hectfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,9 +46,11 @@ size_t	ft_strlcpy(char	*dest, const char	*src, size_t	size);
 void	*ft_bzero(void	*s, size_t	n);
 void	*ft_calloc(size_t	n, size_t	size);
 void	*ft_memset(void	*s, int	c, size_t	n);
-void	*ft_memmove(void	*s1, const void	*s2, size_t	n);
 void	*ft_memcpy(void	*s1, const void	*s2, size_t	n);
 void	*ft_memchr(const void	*s, int	c, size_t	n);
+void	*ft_memmove(void	*s1, const void	*s2, size_t	n);
+
+void	ft_putchar_fd(char	c, int	fd);
 void	ft_striteri(char	*s, void	(*f)(unsigned int, char *));
 
 #endif 

@@ -6,7 +6,7 @@
 /*   By: hectfern <hectfern@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/02 15:32:03 by hectfern          #+#    #+#             */
-/*   Updated: 2021/08/06 11:17:34 by hectfern         ###   ########.fr       */
+/*   Updated: 2021/08/06 11:23:55 by hectfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,6 @@ void	*ft_memset(void	*s, int	c, size_t	n);
 void	*ft_memmove(void	*s1, const void	*s2, size_t	n);
 void	*ft_memcpy(void	*s1, const void	*s2, size_t	n);
 void	*ft_memchr(const void	*s, int	c, size_t	n);
-void	ft_striteri(char const	*s, char	(*f)(unsigned int, char *));
+void	ft_striteri(char	*s, void	(*f)(unsigned int, char *));
 
 #endif 

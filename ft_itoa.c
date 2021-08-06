@@ -6,7 +6,7 @@
 /*   By: hectfern <hectfern@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/05 17:03:14 by hectfern          #+#    #+#             */
-/*   Updated: 2021/08/06 08:47:38 by hectfern         ###   ########.fr       */
+/*   Updated: 2021/08/06 10:25:47 by hectfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ char	*ft_itoa(int	n)
 	return (ptr);
 }
 
-int		number_len(int	n)
+int	number_len(int	n)
 {
 	int	len;
 

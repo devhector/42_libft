@@ -6,7 +6,7 @@
 /*   By: hectfern <hectfern@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/02 15:32:03 by hectfern          #+#    #+#             */
-/*   Updated: 2021/08/06 08:06:11 by hectfern         ###   ########.fr       */
+/*   Updated: 2021/08/06 09:53:49 by hectfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,11 @@ char	*ft_itoa(int	n);
 char	*ft_strdup(const char	*s);
 char	*ft_strchr(const char	*s, int	c);
 char	*ft_strrchr(const char	*s, int	c);
-char	*ft_strnstr(const char	*s1, const char	*s2, size_t	len);
-char	*ft_substr(char const	*s, unsigned int	pos, size_t	len);
 char	*ft_strjoin(char const	*s1, char const	*s2);
 char	*ft_strtrim(char const	*s1, char const	*set);
+char	*ft_strnstr(const char	*s1, const char	*s2, size_t	len);
+char	*ft_substr(char const	*s, unsigned int	pos, size_t	len);
+char	*ft_strmapi(char const	*s, char	(*f)(unsigned int, char));
 
 // char	**ft_split(char const	*s, char c);
 

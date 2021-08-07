@@ -6,7 +6,7 @@
 /*   By: hectfern <hectfern@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/06 20:04:23 by hectfern          #+#    #+#             */
-/*   Updated: 2021/08/07 08:42:02 by hectfern         ###   ########.fr       */
+/*   Updated: 2021/08/07 09:00:24 by hectfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,16 @@
 
 void	ft_lstadd_back(t_list	**lst, t_list	*new)
 {
-	if(!*lst || !new)
+	if(!new)
 		return ;
-	if ((*lst)->next)
+	if(!*lst)
+	{
+		*lst = new;
+	}
+	else if ((*lst)->next)
 		ft_lstadd_back(lst, new);
 	else
 	{
-		(*lst)->next->content = new;
-		(*lst)->next->next = NULL; 
+		(*lst)->next = new; 
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: hectfern <hectfern@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/02 15:32:03 by hectfern          #+#    #+#             */
-/*   Updated: 2021/08/06 20:02:46 by hectfern         ###   ########.fr       */
+/*   Updated: 2021/08/07 10:10:25 by hectfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,7 @@ void	ft_putchar_fd(char	c, int	fd);
 void	ft_putendl_fd(char	*s, int	fd);
 void	ft_lstadd_front(t_list	**lst, t_list	*new);
 void	ft_lstadd_back(t_list	**lst, t_list	*new);
+void	ft_lstdelone(t_list	*lst, void	(*del)(void*));
 void	ft_striteri(char	*s, void	(*f)(unsigned int, char *));
 
 t_list	*ft_lstnew(void	*content);

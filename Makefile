@@ -17,7 +17,7 @@ FUNC		= ft_atoi.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c\
 OBJ			= $(FUNC:.c=.o)
 
 BONUS		= ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c\
-				ft_lstadd_back.c
+				ft_lstadd_back.c ft_lstdelone.c
 
 BONUS_OBJ	= $(BONUS:.c=.o)
 

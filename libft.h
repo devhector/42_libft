@@ -6,7 +6,7 @@
 /*   By: hectfern <hectfern@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/02 15:32:03 by hectfern          #+#    #+#             */
-/*   Updated: 2021/08/07 14:29:29 by hectfern         ###   ########.fr       */
+/*   Updated: 2021/08/09 11:01:11 by hectfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,5 +70,6 @@ void	ft_striteri(char	*s, void	(*f)(unsigned int, char *));
 
 t_list	*ft_lstnew(void	*content);
 t_list	*ft_lstlast(t_list *lst);
+t_list	*ft_lstmap(t_list	*lst, void	*(*f)(void	*), void	(*del)(void	*));
 
 #endif 

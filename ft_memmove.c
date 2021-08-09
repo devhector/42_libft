@@ -6,7 +6,7 @@
 /*   By: hectfern <hectfern@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/02 16:34:21 by hectfern          #+#    #+#             */
-/*   Updated: 2021/08/09 12:40:25 by hectfern         ###   ########.fr       */
+/*   Updated: 2021/08/09 12:45:31 by hectfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,19 +26,14 @@ void	*ft_memmove(void	*s1, const void	*s2, size_t	n)
 	{
 		i = 0;
 		while (n--)
-		{
-			dest[i] = src[i];
-			i++;
-		}
+			dest[i++] = src[i];
 	}
 	else
 	{
 		i = n - 1;
 		while (n--)
-		{
-			dest[i] = src[i];
-			i--;
-		}
+			dest[i--] = src[i];
+			
 	}
 	return (s1);
 }

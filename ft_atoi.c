@@ -6,7 +6,7 @@
 /*   By: hectfern <hectfern@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/02 14:36:23 by hectfern          #+#    #+#             */
-/*   Updated: 2021/08/09 16:32:06 by hectfern         ###   ########.fr       */
+/*   Updated: 2021/08/09 16:36:24 by hectfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,12 +31,12 @@ int	ft_atoi(const char	*str)
 	{
 		buf = nbr;
 		nbr = (nbr * 10) + (str[count++] - '0');
-		if (nbr < buf)
+		if (buf > nbr)
 		{
-			if (sign < 0)
-				return (0);
-			else
+			if (sign > 0)
 				return (-1);
+			else
+				return (0);
 		}
 	}
 	return (nbr * sign);

@@ -41,7 +41,7 @@ bonus:		$(BONUS_OBJ) $(NAME)
 
 clean:
 			@echo "Cleaning"
-			@$(RM) $(OBJ)
+			@$(RM) $(OBJ) $(BONUS_OBJ)
 
 fclean:		clean
 			@echo "Cleaning headers"

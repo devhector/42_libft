@@ -6,7 +6,7 @@
 /*   By: hectfern <hectfern@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/02 16:14:29 by hectfern          #+#    #+#             */
-/*   Updated: 2021/08/09 11:42:46 by hectfern         ###   ########.fr       */
+/*   Updated: 2021/08/09 11:49:15 by hectfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	*ft_memcpy(void	*s1, const void	*s2, size_t	n)
 	char		*dst;
 	const char	*src;
 
-	if(!s1 || !s2 || !n)
+	if(!s1 || !n)
 		return (NULL);
 	dst = (char *)s1;
 	src = (const char *)s2;

@@ -6,7 +6,7 @@
 /*   By: hectfern <hectfern@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/04 15:00:58 by hectfern          #+#    #+#             */
-/*   Updated: 2021/08/09 11:27:20 by hectfern         ###   ########.fr       */
+/*   Updated: 2021/08/09 11:31:00 by hectfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,9 @@ char	*ft_strtrim(char const	*s1, char const	*set)
 			start++;
 		while (s1[end - 1] && end > start && ft_strchr(set, s1[end - 1]))
 			end--;
-		str = (char *)malloc(sizeof(char *) * (end - start + 2));
+		str = (char *)malloc(sizeof(char *) * (end - start + 1));
 		if (str)
-			ft_strlcpy(str, &s1[start], end - start + 2);
+			ft_strlcpy(str, &s1[start], end - start + 1);
 	}
 	return (str);
 }

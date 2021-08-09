@@ -6,7 +6,7 @@
 /*   By: hectfern <hectfern@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/04 14:06:42 by hectfern          #+#    #+#             */
-/*   Updated: 2021/08/04 14:52:04 by hectfern         ###   ########.fr       */
+/*   Updated: 2021/08/09 17:18:43 by hectfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,12 @@ char	*ft_strjoin(char const	*s1, char const	*s2)
 	size_t		str_len;
 	char		*str;
 
+	if (!s1 || !s2)
+		return (NULL);
 	s1_len = ft_strlen(s1);
 	s2_len = ft_strlen(s2);
 	str = (char *)ft_calloc(s1_len + s2_len + 1, sizeof(char));
-	if (!str || !s1 || !s2)
+	if (!str)
 		return (NULL);
 	str_len = 0;
 	while (str_len < s1_len)

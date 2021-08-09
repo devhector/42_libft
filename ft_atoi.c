@@ -6,7 +6,7 @@
 /*   By: hectfern <hectfern@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/02 14:36:23 by hectfern          #+#    #+#             */
-/*   Updated: 2021/08/09 15:57:41 by hectfern         ###   ########.fr       */
+/*   Updated: 2021/08/09 16:27:32 by hectfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,17 +25,19 @@ int	ft_atoi(const char	*str)
 	sign = 1;
 	count = space_counter(str);
 	if (str[count] == '-' || str[count] == '+')
-	{
-		if (str[count] == '-')
+		if (str[count++] == '-')
 			sign = -1;
-		count++;
-	}
 	while (ft_isdigit(str[count]))
 	{
 		buf = nbr;
 		nbr = (nbr * 10) + (str[count++] - '0');
 		if (nbr < buf)
-			return (0);
+		{
+			if (sign < 0)
+				return (0);
+			else
+				return (-1);
+		}
 	}
 	return (nbr * sign);
 }

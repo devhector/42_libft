@@ -6,7 +6,7 @@
 /*   By: hectfern <hectfern@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/02 14:36:23 by hectfern          #+#    #+#             */
-/*   Updated: 2021/08/09 15:49:46 by hectfern         ###   ########.fr       */
+/*   Updated: 2021/08/09 15:57:41 by hectfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ static int	space_counter(const char	*s);
 int	ft_atoi(const char	*str)
 {
 	long	nbr;
+	long	buf;
 	int		sign;
 	size_t	count;
 
@@ -31,9 +32,10 @@ int	ft_atoi(const char	*str)
 	}
 	while (ft_isdigit(str[count]))
 	{
-		nbr *= 10;
-		nbr += (str[count] - '0');
-		count++;
+		buf = nbr;
+		nbr = (nbr * 10) + (str[count++] - '0');
+		if (nbr < buf)
+			return (0);
 	}
 	return (nbr * sign);
 }

@@ -6,7 +6,7 @@
 /*   By: hectfern <hectfern@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/02 16:34:21 by hectfern          #+#    #+#             */
-/*   Updated: 2021/08/09 12:49:12 by hectfern         ###   ########.fr       */
+/*   Updated: 2021/08/09 13:14:46 by hectfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,26 +14,22 @@
 
 void	*ft_memmove(void	*s1, const void	*s2, size_t	n)
 {
-	char		*dest;
+	char	*dst;
 	const char	*src;
-	size_t		i;
 
-	if (!s1 || !s2)
+	if (!s1 && !s2)
 		return (NULL);
+	
+	dst = (char *)s1;
 	src = (const char *)s2;
-	dest = (char *)s1;
-	if (dest < src)
-	{
-		i = 0;
-		while (n--)
-			dest[i] = src[i++];
-	}
+
+	if (dst < src)
+		ft_memcpy(dst, src, n);
 	else
 	{
-		i = n - 1;
 		while (n--)
-			dest[i] = src[i--];
-			
+			dst[n] = src[n];
 	}
+	
 	return (s1);
 }

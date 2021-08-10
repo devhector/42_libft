@@ -6,7 +6,7 @@
 /*   By: hectfern <hectfern@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/02 16:35:14 by hectfern          #+#    #+#             */
-/*   Updated: 2021/08/10 10:33:09 by hectfern         ###   ########.fr       */
+/*   Updated: 2021/08/10 10:39:24 by hectfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ int	ft_strncmp(const char	*s1, const char	*s2, size_t	n)
 {
 	size_t	i;
 
-	if (*s2)
-		return (s1);
 	i = 0;
 	while ((s1[i] || s2[i]) && i < n)
 	{

@@ -6,7 +6,7 @@
 /*   By: hectfern <hectfern@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/02 16:35:21 by hectfern          #+#    #+#             */
-/*   Updated: 2021/08/10 11:40:50 by hectfern         ###   ########.fr       */
+/*   Updated: 2021/08/10 11:47:15 by hectfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,21 +15,28 @@
 char	*ft_strnstr(const char	*s1, const char	*s2, size_t	len)
 {
 	size_t	i;
+	size_t	j;
+	size_t	s2_len;
 
-	i = 0;
-	if (!*s2)
+	s2_len = ft_strlen(s2);
+	if (!s2_len)
 		return ((char *)s1);
-	while (*s1)
+	i = 0;
+	while (s1[i] && (i + s2_len < len))
 	{
-		while (*s1 && *s2 && *s1 == *s2 && i < len)
+		if (s1[i] == s2[0])
 		{
-			s1++;
-			s2++;
-			i++;
+			j = 0;
+			while (s1[i + j] && s2[j])
+			{
+				if (s1[i + j] != s2[j])
+					break ;
+				else if (j == s2_len - 1)
+					return ((char *)s1 + i);
+				j++;
+			}
 		}
-		if (!*s2)
-			return ((char *)(s1 + i));
-		s1++;
+		i++;
 	}
 	return (NULL);
 }

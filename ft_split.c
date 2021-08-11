@@ -6,7 +6,7 @@
 /*   By: hectfern <hectfern@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/05 16:04:27 by hectfern          #+#    #+#             */
-/*   Updated: 2021/08/11 10:47:20 by hectfern         ###   ########.fr       */
+/*   Updated: 2021/08/11 14:37:39 by hectfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,8 @@ char	**ft_split(char const	*s, char	c)
 
 	word_c = word_counter(s, c);
 	result = (char **)malloc(sizeof(char *) * (word_c + 1));
-	if (!result || !s || !c)
-		return ((char **)clear_mem(result));
+	if (!result || !s)
+		return (NULL);
 	i = 0;
 	j = 0;
 	while (s[j] && i < word_c)

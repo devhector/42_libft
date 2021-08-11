@@ -6,7 +6,7 @@
 /*   By: hectfern <hectfern@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/05 16:04:27 by hectfern          #+#    #+#             */
-/*   Updated: 2021/08/10 21:22:03 by hectfern         ###   ########.fr       */
+/*   Updated: 2021/08/10 21:41:36 by hectfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ char	**ft_split(char const	*s, char	c)
 		return (NULL);
 	i = 0;
 	j = 0;
-	while (s[i] && i < word_c)
+	while (s[j] && i < word_c)
 	{
 		if (s[j] != c)
 		{

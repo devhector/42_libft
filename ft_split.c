@@ -6,7 +6,7 @@
 /*   By: hectfern <hectfern@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/05 16:04:27 by hectfern          #+#    #+#             */
-/*   Updated: 2021/08/10 20:55:56 by hectfern         ###   ########.fr       */
+/*   Updated: 2021/08/10 21:22:03 by hectfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,9 +45,9 @@ char	**ft_split(char const	*s, char	c)
 	{
 		if (s[j] != c)
 		{
-			result[i] = word_split((*s + j), c);
+			result[i] = word_split(&s[j], c);
 			if (!result[i++])
-				return (clear_mem(result));
+				return ((char **)clear_mem(result));
 			while (s[j] && s[j] != c)
 				j++;
 		}

@@ -6,7 +6,7 @@
 /*   By: hectfern <hectfern@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/05 16:04:27 by hectfern          #+#    #+#             */
-/*   Updated: 2021/08/11 15:49:28 by hectfern         ###   ########.fr       */
+/*   Updated: 2021/08/11 15:51:37 by hectfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ char	**ft_split(char const	*s, char	c)
 		else
 			j++;
 	}
-	result[i] = '\0';
+	result[i] = NULL;
 	return (result);
 }
 

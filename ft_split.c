@@ -6,7 +6,7 @@
 /*   By: hectfern <hectfern@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/05 16:04:27 by hectfern          #+#    #+#             */
-/*   Updated: 2021/08/13 14:55:59 by hectfern         ###   ########.fr       */
+/*   Updated: 2021/08/13 15:06:52 by hectfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,8 @@ static size_t	count_words(char const	*s, char	c)
 	counter = 0;
 	while (s[i] && s[i] != c)
 		i++;
+	if (i)
+		counter++;
 	while (s[i] != '\0')
 	{
 		if (s[i] != c)

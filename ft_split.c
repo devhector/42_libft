@@ -6,7 +6,7 @@
 /*   By: hectfern <hectfern@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/05 16:04:27 by hectfern          #+#    #+#             */
-/*   Updated: 2021/08/11 15:51:37 by hectfern         ###   ########.fr       */
+/*   Updated: 2021/08/13 14:26:17 by hectfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,88 +24,95 @@ ended by a NULL pointer.
 
 #include "libft.h"
 
-static void		**clear_mem(char	**str);
-static size_t	word_counter(char const	*str, char	c);
-static char		*word_split(char const	*str, char	c);
+static char		**free_all(char	**s, size_t	n);
+static size_t	count_word(char const	*s, char	c);
+static size_t	count_words(char const	*s, char	c);
+static char		**split(char	**result, char const	*s, char	c);
 
-char	**ft_split(char const	*s, char	c)
+char	**ft_split(char const	*s, char c)
 {
 	char	**result;
-	size_t	word_c;
-	size_t	i;
-	size_t	j;
+	size_t	qtd_words;
 
-	word_c = word_counter(s, c);
-	result = (char **)malloc(sizeof(char *) * (word_c + 1));
+	if (!s)
+		return (NULL);
+	qtd_words = count_words(s, c);
+	result = (char **)malloc(sizeof(char *) * (qtd_words + 1));
 	if (!result)
 		return (NULL);
-	i = 0;
-	j = 0;
-	while (s[j] && i < word_c)
-	{
-		if (s[j] != c)
-		{
-			result[i] = word_split(&s[j], c);
-			if (!result[i++])
-				return ((char **)clear_mem(result));
-			while (s[j] && s[j] != c)
-				j++;
-		}
-		else
-			j++;
-	}
-	result[i] = NULL;
-	return (result);
+	return (split(result, s, c));
 }
 
-static size_t	word_counter(char const	*str, char	c)
+static size_t	count_words(char const	*s, char	c)
 {
 	size_t	i;
-	size_t	count;
+	size_t	counter;
 
 	i = 0;
-	count = 0;
-	while (str[i] && str[i] == c)
+	counter = 0;
+	while (s[i] && s[i] != c)
 		i++;
-	while (str[i])
+	while (s[i] != '\0')
 	{
-		if (str[i] != c)
+		if (s[i] != c)
 		{
-			count++;
-			while (str[i] && str[i] != c)
+			counter++;
+			while (s[i] && s[i] != c)
 				i++;
 		}
 		else
 			i++;
 	}
-	return (count);
+	return (counter);
 }
 
-static char	*word_split(char const	*str, char	c)
-{
-	char	*word;
-	size_t	word_len;
-
-	word_len = 0;
-	while (str[word_len] && str[word_len] != c)
-		word_len++;
-	word = (char *)malloc(sizeof(char) * (word_len + 1));
-	if (!word)
-		return (NULL);
-	ft_strlcpy(word, str, word_len + 1);
-	return (word);
-}
-
-static void	**clear_mem(char	**str)
+static size_t	count_word(char const	*s, char	c)
 {
 	size_t	i;
 
 	i = 0;
-	while (str[i])
-	{
-		free(str[i]);
+	while (s[i] && s[i] != c)
 		i++;
+	return (i);
+}
+
+char	**split(char	**result, char const	*s, char	c)
+{
+	size_t	i;
+	size_t	qtd_words;
+
+	i = 0;
+	qtd_words = count_words(s, c);
+	while (i < qtd_words)
+	{
+		while (*s)
+		{
+			if (*s != c)
+			{
+				result[i] = (char *)malloc(sizeof(char) 
+							* (count_word(s, c) + 1));
+				ft_strlcpy(result[i], s, count_word(s, c) + 1);
+				if (!result[i])
+					return (free_all(result, qtd_words));
+				s += count_word(s, c) + 1;
+				i++;
+			}
+			else
+				s++;
+		}
 	}
-	free(str);
+	result[i] = NULL;
+	return (result);
+}
+
+static char	**free_all(char	**s, size_t	n)
+{
+		while (n > 0)
+	{
+		free(s[n]);
+		n--;
+	}
+	free(s[0]);
+	free(s);
 	return (NULL);
 }

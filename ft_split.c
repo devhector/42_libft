@@ -6,7 +6,7 @@
 /*   By: hectfern <hectfern@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/05 16:04:27 by hectfern          #+#    #+#             */
-/*   Updated: 2021/08/13 14:26:17 by hectfern         ###   ########.fr       */
+/*   Updated: 2021/08/13 14:55:59 by hectfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,8 +89,8 @@ char	**split(char	**result, char const	*s, char	c)
 		{
 			if (*s != c)
 			{
-				result[i] = (char *)malloc(sizeof(char) 
-							* (count_word(s, c) + 1));
+				result[i] = (char *)malloc(sizeof(char)
+						* (count_word(s, c) + 1));
 				ft_strlcpy(result[i], s, count_word(s, c) + 1);
 				if (!result[i])
 					return (free_all(result, qtd_words));
@@ -107,7 +107,7 @@ char	**split(char	**result, char const	*s, char	c)
 
 static char	**free_all(char	**s, size_t	n)
 {
-		while (n > 0)
+	while (n > 0)
 	{
 		free(s[n]);
 		n--;

@@ -6,7 +6,7 @@
 /*   By: hectfern <hectfern@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/05 16:04:27 by hectfern          #+#    #+#             */
-/*   Updated: 2021/08/13 16:11:25 by hectfern         ###   ########.fr       */
+/*   Updated: 2021/08/13 16:13:59 by hectfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,11 +106,8 @@ char	**split(char	**result, char const	*s, char	c)
 static char	**free_all(char	**s, size_t	n)
 {
 	while (n > 0)
-	{
-		free(s[n]);
-		n--;
-	}
-	free(s[0]);
+		free(s[n--]);
+	free(s[n]);
 	free(s);
 	return (NULL);
 }

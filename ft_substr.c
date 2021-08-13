@@ -6,7 +6,7 @@
 /*   By: hectfern <hectfern@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/04 12:15:49 by hectfern          #+#    #+#             */
-/*   Updated: 2021/08/13 17:42:11 by hectfern         ###   ########.fr       */
+/*   Updated: 2021/08/13 17:43:53 by hectfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_substr(char const *s, unsigned int pos, size_t len)
 	size_t	i;
 	char	*dst;
 
-	if (!s || !len)
+	if (!s)
 		return (NULL);
 	dst = (char *)malloc(sizeof(char) * (len + 1));
 	if (!dst)

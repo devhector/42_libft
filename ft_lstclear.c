@@ -6,7 +6,7 @@
 /*   By: hectfern <hectfern@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/07 12:16:23 by hectfern          #+#    #+#             */
-/*   Updated: 2021/08/07 12:42:28 by hectfern         ###   ########.fr       */
+/*   Updated: 2021/08/13 15:41:44 by hectfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_lstclear(t_list	**lst, void	(*del)(void*))
 	t_list	*tmp;
 	t_list	*tmp2;
 
-	if	(!*lst)
+	if (!*lst)
 		return ;
 	tmp = *lst;
 	while (tmp)

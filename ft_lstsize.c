@@ -6,7 +6,7 @@
 /*   By: hectfern <hectfern@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/06 19:35:45 by hectfern          #+#    #+#             */
-/*   Updated: 2021/08/06 19:43:44 by hectfern         ###   ########.fr       */
+/*   Updated: 2021/08/13 15:40:57 by hectfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_lstsize(t_list *lst)
 {
-	int count;
+	int	count;
 
 	count = 0;
 	if (lst)

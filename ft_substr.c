@@ -6,7 +6,7 @@
 /*   By: hectfern <hectfern@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/04 12:15:49 by hectfern          #+#    #+#             */
-/*   Updated: 2021/08/13 18:45:25 by hectfern         ###   ########.fr       */
+/*   Updated: 2021/08/13 19:45:19 by hectfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	*ft_substr(char const *s, unsigned int pos, size_t len)
 	j = 0;
 	while (s[i])
 	{
-		if (i >= pos && j < len)
+		if (i >= pos && j <= len)
 		{
 			dst[j] = s[i];
 			j++;

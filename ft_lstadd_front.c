@@ -6,7 +6,7 @@
 /*   By: hectfern <hectfern@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/06 19:17:47 by hectfern          #+#    #+#             */
-/*   Updated: 2021/08/13 15:40:33 by hectfern         ###   ########.fr       */
+/*   Updated: 2021/08/13 15:43:20 by hectfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,5 +18,5 @@ void	ft_lstadd_front(t_list	**lst, t_list	*new)
 
 	tmp = *lst;
 	*lst = new;
-	new->next = tmp; 
+	new->next = tmp;
 }

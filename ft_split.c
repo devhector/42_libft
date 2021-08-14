@@ -6,21 +6,9 @@
 /*   By: hectfern <hectfern@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/05 16:04:27 by hectfern          #+#    #+#             */
-/*   Updated: 2021/08/13 16:42:58 by hectfern         ###   ########.fr       */
+/*   Updated: 2021/08/14 14:25:41 by hectfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-/*
-Parameters #1. The string to be split.
-#2. The delimiter character.
-Return value The array of new strings resulting from the split.
-NULL if the allocation fails.
-External functs. malloc, free
-Description Allocates (with malloc(3)) and returns an array
-of strings obtained by splitting ’s’ using the
-character ’c’ as a delimiter. The array must be
-ended by a NULL pointer.
-*/
 
 #include "libft.h"
 

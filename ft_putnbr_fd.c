@@ -6,7 +6,7 @@
 /*   By: hectfern <hectfern@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/06 13:06:09 by hectfern          #+#    #+#             */
-/*   Updated: 2021/08/14 14:17:00 by hectfern         ###   ########.fr       */
+/*   Updated: 2021/08/14 14:28:00 by hectfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,10 @@ void	ft_putnbr_fd(int n, int fd)
 			n = -n;
 		}
 		if (n < 10)
+		{
 			ft_putchar_fd(n + '0', fd);
+			return ;
+		}
 		else
 			ft_putnbr_fd(n / 10, fd);
 		ft_putchar_fd((n % 10) + '0', fd);

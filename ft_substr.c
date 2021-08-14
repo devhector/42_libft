@@ -6,7 +6,7 @@
 /*   By: hectfern <hectfern@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/04 12:15:49 by hectfern          #+#    #+#             */
-/*   Updated: 2021/08/14 12:46:16 by hectfern         ###   ########.fr       */
+/*   Updated: 2021/08/14 12:53:48 by hectfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	str = (char *)malloc(sizeof(char) * (len + 1));
 	if (!str)
 		return (NULL);
-	ft_memcpy(str, s + start, len);
-	str[len] = '\0';
+	ft_strlcpy(str, s + start, len + 1);
 	return (str);
 }
 

@@ -1,5 +1,5 @@
 
-CFLAGS		= -Wall -Wextra -Werror -std=c99 -g
+CFLAGS		= -Wall -Wextra -Werror -g
 CC			= clang
 NAME		= libft.a
 FLAGLIB		= -rcs

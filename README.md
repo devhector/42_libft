@@ -51,6 +51,6 @@ make
 Execução bonus:
 
 ```shell
-m
+make bonus
 ```
 

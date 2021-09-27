@@ -40,3 +40,17 @@ You can see this last section as Bonus Points. Having functions to manipulate me
 
 ![evaluation](./screenshot.png)
 
+---
+
+Execução:
+
+```shell
+make
+```
+
+Execução bonus:
+
+```shell
+m
+```
+
